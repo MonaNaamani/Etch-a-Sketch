@@ -15,8 +15,27 @@ function divQuantity (a) {
     divs[i].setAttribute('style', `height: ${height -1*2}px; width: ${width -1*2}px;`);
     container.appendChild(divs[i]);
   }
+  return divs;
 }
 
-divQuantity(4);
+const allNewDivs = divQuantity(4);
+// console.log(divQuantity(4));
+// console.log(allNewDivs);
 
-addEventListener("mouseover", e => {});
+allNewDivs.forEach(newDiv => newDiv.addEventListener('mouseover', mouseOver))
+
+function mouseOver(e) {
+  this.classList.add('hovered');
+}
+
+allNewDivs.forEach(newDiv => newDiv.addEventListener('mouseout', mouseOut))
+
+function mouseOut(e) {
+  this.classList.remove('hovered');
+}
+
+
+
+
+    // divs[i].addEventListener("mouseover", mouseOver);
+    // divs[i].addEventListener("mouseout", mouseOut);

@@ -52,3 +52,9 @@ button {
   border-color: #ce9778;
   border-width: 1px;
 }
+
+.hovered {
+  background-color: rgb(152, 8, 32);
+  transition-property: color;
+  transition-duration: 3000ms;
+}
