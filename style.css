@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   padding: 10px;
+  font-size: 60px;
 }
 
 .content {
@@ -20,23 +21,34 @@
 }
 
 button {
-  background-color: #cf6120;
-  height: 30px;
-  font-size: 16px;
+  background-color: #ce9778;
+  height: 60px;
+  width: 400px;
+  font-size: 36px;
   cursor: pointer;
 }
 
-.container {
+.grid{
   height: 650px;
   display: flex;
   justify-content: center;
 }
 
-.grid {
-  background-color: #6e6621;
+.container {
+  background-color: #4d4d4a;
   border-style: solid;
   border-color: black;
   border-width: 10px;
   margin: 20px;
-  width: 500px;
+  width: 510px;
+  height: 510px;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.new {
+  border-style: solid;
+  border-color: #ce9778;
+  border-width: 1px;
 }
