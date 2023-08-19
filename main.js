@@ -1,15 +1,12 @@
-// Several colors to choose from
-// All different sizes the div can be (Height and width) 16x16
-// How to position them inside the container
-
-// This function creates divs based on a chosen number, and it appends them to the DOM.+ it decides the height and width attributes.
-function divQuantity (a) {
+// This function creates divs based on a chosen number, and it appends them to the DOM + it decides the height and width attributes.
+function createDivs (a) {
+  
   const container = document.querySelector('.container');
   const divs = [];
   const height = 510/a;
   const width = 510/a;
 
-  for (let i = 1; i < (a*a + 1); i++) {
+  for (let i = 0; i < (a*a); i++) {
     divs[i] = document.createElement('div');
     divs[i].classList.add('new');
     divs[i].setAttribute('style', `height: ${height -1*2}px; width: ${width -1*2}px;`);
@@ -18,9 +15,9 @@ function divQuantity (a) {
   return divs;
 }
 
-const allNewDivs = divQuantity(4);
-// console.log(divQuantity(4));
-// console.log(allNewDivs);
+// Hover event - it adds a class
+
+const allNewDivs = createDivs(5);
 
 allNewDivs.forEach(newDiv => newDiv.addEventListener('mouseover', mouseOver))
 
@@ -28,14 +25,22 @@ function mouseOver(e) {
   this.classList.add('hovered');
 }
 
+// Hover event - it removes a class
+
 allNewDivs.forEach(newDiv => newDiv.addEventListener('mouseout', mouseOut))
 
 function mouseOut(e) {
   this.classList.remove('hovered');
 }
 
+// event that colors the divs randomly
 
+allNewDivs.forEach(newDiv => newDiv.addEventListener('mouseover', colorDivs))
 
+function randColor () {
+     return "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
+}
 
-    // divs[i].addEventListener("mouseover", mouseOver);
-    // divs[i].addEventListener("mouseout", mouseOut);
+function colorDivs (e) {
+   this.style.backgroundColor = `${randColor()}`;
+}

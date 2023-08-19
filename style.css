@@ -44,17 +44,20 @@ button {
   height: 510px;
   display: flex;
   flex-wrap: wrap;
-  
 }
 
 .new {
   border-style: solid;
-  border-color: #ce9778;
+  border-color: #000000;
   border-width: 1px;
+  transition-property: all;transition-duration: 1000ms;
+  transition-timing-function: ease-out;
+
 }
 
 .hovered {
-  background-color: rgb(152, 8, 32);
-  transition-property: color;
-  transition-duration: 3000ms;
+  /* background-color: rgb(118, 186, 29); */
+  transition-property: all;
+  transition-duration: 700ms;
+  transition-timing-function: ease-out;
 }
