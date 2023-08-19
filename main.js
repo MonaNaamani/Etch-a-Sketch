@@ -36,12 +36,20 @@ function mouseOut(e) {
 
 // event that colors the divs randomly
 
-allNewDivs.forEach(newDiv => newDiv.addEventListener('mouseover', colorDivs))
-
 function randColor () {
      return "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
 }
 
 // Dropdown button
 
+function createOptions () {
+  const select = document.querySelector('.select');
+  const selectElements = [];
 
+  for (let i = 0; i < 64; i++) {
+    selectElements[i] = document.createElement('option');
+    selectElements[i].classList.add(`option${(i + 1)}`);
+    selectElements[i].textContent = `${i + 1} x ${i + 1}`;
+    select.appendChild(selectElements[i]);
+  }
+}
