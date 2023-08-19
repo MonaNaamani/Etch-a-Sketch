@@ -23,6 +23,7 @@ allNewDivs.forEach(newDiv => newDiv.addEventListener('mouseover', mouseOver))
 
 function mouseOver(e) {
   this.classList.add('hovered');
+  this.style.backgroundColor = `${randColor()}`;
 }
 
 // Hover event - it removes a class
@@ -41,6 +42,6 @@ function randColor () {
      return "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
 }
 
-function colorDivs (e) {
-   this.style.backgroundColor = `${randColor()}`;
-}
+// Dropdown button
+
+

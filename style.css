@@ -44,20 +44,20 @@ button {
   height: 510px;
   display: flex;
   flex-wrap: wrap;
+
 }
 
 .new {
+  background-color: #ffffff;
   border-style: solid;
   border-color: #000000;
-  border-width: 1px;
+  margin: 1px;
   transition-property: all;transition-duration: 1000ms;
   transition-timing-function: ease-out;
-
 }
 
-.hovered {
-  /* background-color: rgb(118, 186, 29); */
+/* .hovered {
   transition-property: all;
   transition-duration: 700ms;
   transition-timing-function: ease-out;
-}
+} */
