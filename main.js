@@ -52,4 +52,7 @@ function createOptions () {
     selectElements[i].textContent = `${i + 1} x ${i + 1}`;
     select.appendChild(selectElements[i]);
   }
+  return selectElements;
 }
+
+createOptions();
